@@ -26,6 +26,14 @@
 
 ---
 
+
+## Conheça a interface
+
+<div align="center">
+  <img src="assets/interface-preview.svg" alt="Prévia ilustrativa do AlgeAD Manager em modo claro: pesquisa de usuários, propriedades e ações rápidas" width="1200">
+  <p><sub>Prévia ilustrativa em modo claro, baseada na interface RC4. Todos os dados são fictícios; a aparência pode variar conforme a versão e as configurações.</sub></p>
+</div>
+
 ## Visão geral
 
 O **AlgeAD Manager** é uma alternativa desktop ao console Usuários e Computadores do Active Directory (ADUC), desenvolvida para simplificar tarefas frequentes de suporte técnico e infraestrutura.

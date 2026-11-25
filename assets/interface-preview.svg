@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc"><title id="title">AlgeAD Manager — prévia ilustrativa</title><desc id="desc">Interface de pesquisa de usuários com informações e ações rápidas, utilizando exclusivamente dados fictícios.</desc><g font-family="Segoe UI,Arial,sans-serif">
+<rect x="0" y="0" width="1440" height="900" rx="18" fill="#e8edf4" stroke="none"/>
+<rect x="16" y="16" width="1408" height="868" rx="12" fill="#fff" stroke="#c8d3e0"/>
+<rect x="17" y="17" width="1406" height="34" rx="10" fill="#f4f6fb" stroke="none"/>
+<text x="34" y="39" fill="#172b45" font-size="13" font-weight="400" text-anchor="start">AlgeAD Manager — RC4</text>
+<text x="1332" y="39" fill="#172b45" font-size="17" font-weight="400" text-anchor="start">—    □    ×</text>
+<rect x="17" y="51" width="1406" height="62" rx="0" fill="#fff" stroke="none"/>
+<rect x="34" y="66" width="34" height="34" rx="8" fill="#0878e5" stroke="none"/>
+<g transform="translate(40 72) scale(0.9583333333333334)" fill="none" stroke="#fff" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2h8v6H8z M12 8v5 M5 13h14 M5 13v3 M19 13v3 M1 16h8v6H1z M15 16h8v6h-8z"/></g>
+<text x="78" y="87" fill="#102039" font-size="23" font-weight="700" text-anchor="start">AlgeAD Manager</text>
+<text x="274" y="87" fill="#59728d" font-size="12" font-weight="400" text-anchor="start">v1.0.0-rc.4</text>
+<rect x="363" y="69" width="42" height="24" rx="5" fill="#0875df" stroke="none"/>
+<text x="384" y="85" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">RC4</text>
+<rect x="1050" y="66" width="205" height="28" rx="5" fill="#fff2d6" stroke="#efcf82"/>
+<text x="1152" y="84" fill="#815500" font-size="10" font-weight="700" text-anchor="middle">DEMONSTRAÇÃO ILUSTRATIVA</text>
+<circle cx="1281" cy="80" r="4.5" fill="#1a9d61"/>
+<text x="1293" y="85" fill="#16834c" font-size="14" font-weight="400" text-anchor="start">Simulação</text>
+<path d="M17 113L1423 113" stroke="#d9e3ef" stroke-width="1" fill="none"/>
+<rect x="17" y="114" width="215" height="729" rx="0" fill="#e8eef6" stroke="none"/>
+<text x="43" y="147" fill="#526e8b" font-size="14" font-weight="400" text-anchor="start">‹   Recolher menu</text>
+<path d="M31 164L215 164" stroke="#d9e3ef" stroke-width="1" fill="none"/>
+<g transform="translate(42 189) scale(0.8333333333333334)" fill="none" stroke="#253d56" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h7v7H3z M14 3h7v7h-7z M3 14h7v7H3z M14 14h7v7h-7z"/></g>
+<text x="73" y="204" fill="#253d56" font-size="15" font-weight="400" text-anchor="start">Dashboard</text>
+<rect x="29" y="225" width="191" height="42" rx="9" fill="#086fe1" stroke="none"/>
+<g transform="translate(42 236) scale(0.8333333333333334)" fill="none" stroke="#fff" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8 M4 21v-3c0-5 16-5 16 0v3z"/></g>
+<text x="73" y="251" fill="#fff" font-size="15" font-weight="600" text-anchor="start">Usuários</text>
+<g transform="translate(42 283) scale(0.8333333333333334)" fill="none" stroke="#253d56" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7 M1 19v-2c0-5 14-5 14 0v2z M16 4a3 3 0 0 1 0 6 M17 13c4 0 6 2 6 4v2h-5"/></g>
+<text x="73" y="298" fill="#253d56" font-size="15" font-weight="400" text-anchor="start">Grupos</text>
+<g transform="translate(42 330) scale(0.8333333333333334)" fill="none" stroke="#253d56" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h20v14H2z M8 21h8 M12 17v4"/></g>
+<text x="73" y="345" fill="#253d56" font-size="15" font-weight="400" text-anchor="start">Computadores</text>
+<g transform="translate(42 377) scale(0.8333333333333334)" fill="none" stroke="#253d56" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2h8v6H8z M12 8v5 M5 13h14 M5 13v3 M19 13v3 M1 16h8v6H1z M15 16h8v6h-8z"/></g>
+<text x="73" y="392" fill="#253d56" font-size="15" font-weight="400" text-anchor="start">OUs</text>
+<g transform="translate(42 424) scale(0.8333333333333334)" fill="none" stroke="#253d56" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h8l2 3h10v8H8V8 M3 8v12h7 M10 16h5l2 2h5v5H10z"/></g>
+<text x="73" y="439" fill="#253d56" font-size="15" font-weight="400" text-anchor="start">Explorador</text>
+<g transform="translate(42 471) scale(0.8333333333333334)" fill="none" stroke="#253d56" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11a9 9 0 1 1 2 7 M3 3v8h8 M12 6v7l4 2"/></g>
+<text x="73" y="486" fill="#253d56" font-size="15" font-weight="400" text-anchor="start">Histórico</text>
+<g transform="translate(42 518) scale(0.8333333333333334)" fill="none" stroke="#253d56" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h6l1 3 3 1 3 5-2 2v3l-3 4-3-1-3 3-5-2v-3l-3-2v-5l3-2 1-3z M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8"/></g>
+<text x="73" y="533" fill="#253d56" font-size="15" font-weight="400" text-anchor="start">Configurações</text>
+<path d="M30 764L218 764" stroke="#d9e3ef" stroke-width="1" fill="none"/>
+<rect x="29" y="775" width="191" height="57" rx="9" fill="#fff" stroke="#d3dfed"/>
+<g transform="translate(42 790) scale(0.9583333333333334)" fill="none" stroke="#34516e" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20 M12 6a3 3 0 1 0 0 6 3 3 0 0 0 0-6 M5 19v-1c0-5 14-5 14 0v1"/></g>
+<text x="76" y="796" fill="#172b45" font-size="13" font-weight="700" text-anchor="start">DEMO\operador</text>
+<text x="76" y="815" fill="#516c88" font-size="11" font-weight="400" text-anchor="start">Sessão Windows · AD</text>
+<rect x="233" y="114" width="1190" height="729" rx="0" fill="#f0f4f9" stroke="none"/>
+<rect x="246" y="128" width="1164" height="49" rx="10" fill="#fff" stroke="#d1deeb"/>
+<g transform="translate(261 141) scale(0.9166666666666666)" fill="none" stroke="#65809c" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3a7 7 0 1 0 0 14 7 7 0 0 0 0-14 M15 15l6 6"/></g>
+<text x="294" y="158" fill="#172b45" font-size="16" font-weight="400" text-anchor="start">Usuário Demo</text>
+<rect x="1280" y="135" width="91" height="35" rx="8" fill="#0872df" stroke="none"/>
+<text x="1325" y="157" fill="#fff" font-size="14" font-weight="600" text-anchor="middle">Pesquisar</text>
+<text x="1390" y="158" fill="#66819b" font-size="22" font-weight="400" text-anchor="middle">×</text>
+<text x="246" y="203" fill="#607a95" font-size="12" font-weight="400" text-anchor="start">Pesquisar em</text>
+<rect x="331" y="185" width="125" height="29" rx="6" fill="#fff" stroke="#d1deeb"/>
+<text x="345" y="204" fill="#172b45" font-size="13" font-weight="400" text-anchor="start">Usuários     ⌄</text>
+<rect x="465" y="185" width="126" height="29" rx="14" fill="#0872df" stroke="#d3deeb"/>
+<text x="528" y="204" fill="#fff" font-size="12" font-weight="600" text-anchor="middle">Todos os status</text>
+<rect x="598" y="185" width="99" height="29" rx="14" fill="#f8fafd" stroke="#d3deeb"/>
+<text x="647.5" y="204" fill="#344e69" font-size="12" font-weight="400" text-anchor="middle">Desativados</text>
+<rect x="704" y="185" width="100" height="29" rx="14" fill="#f8fafd" stroke="#d3deeb"/>
+<text x="754" y="204" fill="#344e69" font-size="12" font-weight="400" text-anchor="middle">Bloqueados</text>
+<rect x="1287" y="193" width="13" height="13" rx="2" fill="#fff" stroke="#71869b"/>
+<text x="1308" y="205" fill="#546d86" font-size="13" font-weight="400" text-anchor="start">Busca ampla</text>
+<rect x="246" y="225" width="697" height="603" rx="12" fill="#fff" stroke="#d0deed"/>
+<rect x="954" y="225" width="456" height="411" rx="12" fill="#fff" stroke="#d0deed"/>
+<rect x="954" y="646" width="456" height="182" rx="12" fill="#fff" stroke="#d0deed"/>
+<text x="261" y="251" fill="#122944" font-size="16" font-weight="700" text-anchor="start">Resultados da pesquisa (4)</text>
+<rect x="806" y="235" width="124" height="24" rx="12" fill="#fff" stroke="#d1deeb"/>
+<text x="868" y="251" fill="#58738e" font-size="10" font-weight="400" text-anchor="middle">Restaurar colunas</text>
+<path d="M246 270L943 270" stroke="#d9e3ef" stroke-width="1" fill="none"/>
+<rect x="247" y="271" width="695" height="36" rx="0" fill="#f1f5fa" stroke="none"/>
+<text x="260" y="294" fill="#4e6985" font-size="12" font-weight="600" text-anchor="start">Nome</text>
+<text x="487" y="294" fill="#4e6985" font-size="12" font-weight="600" text-anchor="start">Login</text>
+<text x="650" y="294" fill="#4e6985" font-size="12" font-weight="600" text-anchor="start">Status</text>
+<text x="752" y="294" fill="#4e6985" font-size="12" font-weight="600" text-anchor="start">Último acesso</text>
+<path d="M476 271L476 307" stroke="#d9e3ef" stroke-width="1" fill="none"/>
+<path d="M638 271L638 307" stroke="#d9e3ef" stroke-width="1" fill="none"/>
+<path d="M741 271L741 307" stroke="#d9e3ef" stroke-width="1" fill="none"/>
+<rect x="247" y="307" width="695" height="42" rx="0" fill="#d6e8fc" stroke="none"/>
+<path d="M247 349L942 349" stroke="#d9e3ef" stroke-width="1" fill="none"/>
+<text x="260" y="333" fill="#172b45" font-size="14" font-weight="400" text-anchor="start">Usuário Demo 001</text>
+<text x="487" y="333" fill="#172b45" font-size="13" font-weight="400" text-anchor="start">demo.usuario01</text>
+<rect x="649" y="317" width="64" height="23" rx="6" fill="#e0f4e6" stroke="none"/>
+<circle cx="659" cy="328" r="4.5" fill="#187c43"/>
+<text x="669" y="333" fill="#187c43" font-size="11" font-weight="600" text-anchor="start">Ativo</text>
+<text x="752" y="333" fill="#344e69" font-size="12" font-weight="400" text-anchor="start">24/11/2026 09:30</text>
+<path d="M247 391L942 391" stroke="#d9e3ef" stroke-width="1" fill="none"/>
+<text x="260" y="375" fill="#172b45" font-size="14" font-weight="400" text-anchor="start">Usuário Demo 002</text>
+<text x="487" y="375" fill="#172b45" font-size="13" font-weight="400" text-anchor="start">demo.usuario02</text>
+<rect x="649" y="359" width="64" height="23" rx="6" fill="#e0f4e6" stroke="none"/>
+<circle cx="659" cy="370" r="4.5" fill="#187c43"/>
+<text x="669" y="375" fill="#187c43" font-size="11" font-weight="600" text-anchor="start">Ativo</text>
+<text x="752" y="375" fill="#344e69" font-size="12" font-weight="400" text-anchor="start">24/11/2026 08:22</text>
+<path d="M247 433L942 433" stroke="#d9e3ef" stroke-width="1" fill="none"/>
+<text x="260" y="417" fill="#172b45" font-size="14" font-weight="400" text-anchor="start">Usuário Demo 003</text>
+<text x="487" y="417" fill="#172b45" font-size="13" font-weight="400" text-anchor="start">demo.usuario03</text>
+<rect x="649" y="401" width="84" height="23" rx="6" fill="#fff2cc" stroke="none"/>
+<circle cx="659" cy="412" r="4.5" fill="#9b6300"/>
+<text x="669" y="417" fill="#9b6300" font-size="11" font-weight="600" text-anchor="start">Bloqueado</text>
+<text x="752" y="417" fill="#344e69" font-size="12" font-weight="400" text-anchor="start">23/11/2026 17:40</text>
+<path d="M247 475L942 475" stroke="#d9e3ef" stroke-width="1" fill="none"/>
+<text x="260" y="459" fill="#172b45" font-size="14" font-weight="400" text-anchor="start">Usuário Demo 004</text>
+<text x="487" y="459" fill="#172b45" font-size="13" font-weight="400" text-anchor="start">demo.usuario04</text>
+<rect x="649" y="443" width="84" height="23" rx="6" fill="#fde6e8" stroke="none"/>
+<circle cx="659" cy="454" r="4.5" fill="#a83842"/>
+<text x="669" y="459" fill="#a83842" font-size="11" font-weight="600" text-anchor="start">Desativado</text>
+<text x="752" y="459" fill="#344e69" font-size="12" font-weight="400" text-anchor="start">—</text>
+<circle cx="987" cy="263" r="23" fill="#0873de"/>
+<g transform="translate(974 250) scale(1.0833333333333333)" fill="none" stroke="#fff" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8 M4 21v-3c0-5 16-5 16 0v3z"/></g>
+<text x="1020" y="255" fill="#102039" font-size="19" font-weight="700" text-anchor="start">Usuário Demo 001</text>
+<text x="1020" y="277" fill="#59728d" font-size="13" font-weight="400" text-anchor="start">demo.usuario01</text>
+<rect x="1156" y="261" width="44" height="20" rx="10" fill="#e1f4e9" stroke="none"/>
+<text x="1178" y="275" fill="#187c43" font-size="11" font-weight="600" text-anchor="middle">Ativo</text>
+<text x="1010" y="311" fill="#086fe1" font-size="13" font-weight="600" text-anchor="middle">Informações</text>
+<text x="1120" y="311" fill="#344e69" font-size="13" font-weight="400" text-anchor="middle">Grupos</text>
+<text x="1230" y="311" fill="#344e69" font-size="13" font-weight="400" text-anchor="middle">Permissões</text>
+<text x="1340" y="311" fill="#344e69" font-size="13" font-weight="400" text-anchor="middle">Histórico</text>
+<path d="M954 323L1410 323" stroke="#d9e3ef" stroke-width="1" fill="none"/>
+<path d="M961 323H1067" stroke="#0872df" stroke-width="2.5"/>
+<text x="968" y="344" fill="#5a7391" font-size="12" font-weight="400" text-anchor="start">Bloqueado</text>
+<text x="1150" y="344" fill="#172b45" font-size="12" font-weight="500" text-anchor="start">Não</text>
+<path d="M968 351L1396 351" stroke="#d9e3ef" stroke-width="1" fill="none"/>
+<text x="968" y="372" fill="#5a7391" font-size="12" font-weight="400" text-anchor="start">E-mail</text>
+<text x="1150" y="372" fill="#172b45" font-size="12" font-weight="500" text-anchor="start">demo.usuario01@example.test</text>
+<path d="M968 379L1396 379" stroke="#d9e3ef" stroke-width="1" fill="none"/>
+<text x="968" y="400" fill="#5a7391" font-size="12" font-weight="400" text-anchor="start">Matrícula</text>
+<text x="1150" y="400" fill="#172b45" font-size="12" font-weight="500" text-anchor="start">DEMO-001</text>
+<path d="M968 407L1396 407" stroke="#d9e3ef" stroke-width="1" fill="none"/>
+<text x="968" y="428" fill="#5a7391" font-size="12" font-weight="400" text-anchor="start">Departamento</text>
+<text x="1150" y="428" fill="#172b45" font-size="12" font-weight="500" text-anchor="start">Demonstração</text>
+<path d="M968 435L1396 435" stroke="#d9e3ef" stroke-width="1" fill="none"/>
+<text x="968" y="456" fill="#5a7391" font-size="12" font-weight="400" text-anchor="start">Cargo</text>
+<text x="1150" y="456" fill="#172b45" font-size="12" font-weight="500" text-anchor="start">Analista de suporte (exemplo)</text>
+<path d="M968 463L1396 463" stroke="#d9e3ef" stroke-width="1" fill="none"/>
+<text x="968" y="484" fill="#5a7391" font-size="12" font-weight="400" text-anchor="start">Último acesso (aprox.)</text>
+<text x="1150" y="484" fill="#172b45" font-size="12" font-weight="500" text-anchor="start">24/11/2026 09:30</text>
+<path d="M968 491L1396 491" stroke="#d9e3ef" stroke-width="1" fill="none"/>
+<text x="968" y="512" fill="#5a7391" font-size="12" font-weight="400" text-anchor="start">Expira em</text>
+<text x="1150" y="512" fill="#172b45" font-size="12" font-weight="500" text-anchor="start">Nunca</text>
+<path d="M968 519L1396 519" stroke="#d9e3ef" stroke-width="1" fill="none"/>
+<text x="968" y="540" fill="#5a7391" font-size="12" font-weight="400" text-anchor="start">Senha alterada</text>
+<text x="1150" y="540" fill="#172b45" font-size="12" font-weight="500" text-anchor="start">20/11/2026 08:00</text>
+<path d="M968 547L1396 547" stroke="#d9e3ef" stroke-width="1" fill="none"/>
+<text x="968" y="568" fill="#5a7391" font-size="12" font-weight="400" text-anchor="start">Tentativas (DC)</text>
+<text x="1150" y="568" fill="#172b45" font-size="12" font-weight="500" text-anchor="start">0</text>
+<path d="M968 575L1396 575" stroke="#d9e3ef" stroke-width="1" fill="none"/>
+<text x="968" y="596" fill="#5a7391" font-size="12" font-weight="400" text-anchor="start">Criado em</text>
+<text x="1150" y="596" fill="#172b45" font-size="12" font-weight="500" text-anchor="start">01/11/2026 10:00</text>
+<path d="M968 603L1396 603" stroke="#d9e3ef" stroke-width="1" fill="none"/>
+<g transform="translate(968 658) scale(0.8333333333333334)" fill="none" stroke="#0878e5" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2L3 14h8l-1 8 11-13h-8z"/></g>
+<text x="996" y="675" fill="#112743" font-size="16" font-weight="700" text-anchor="start">Ações rápidas</text>
+<rect x="1338" y="656" width="60" height="23" rx="12" fill="#fff" stroke="#d2ddeb"/>
+<text x="1368" y="671" fill="#5c7691" font-size="10" font-weight="400" text-anchor="middle">Recolher</text>
+<path d="M954 686L1410 686" stroke="#d9e3ef" stroke-width="1" fill="none"/>
+<rect x="965" y="695" width="211" height="24" rx="9" fill="#f0f4f9" stroke="#d2deeb"/>
+<rect x="1183" y="695" width="215" height="24" rx="9" fill="#f0f4f9" stroke="#d2deeb"/>
+<text x="1070" y="711" fill="#324d6a" font-size="11" font-weight="400" text-anchor="middle">Mais ações  ⌄</text>
+<text x="1290" y="711" fill="#324d6a" font-size="11" font-weight="400" text-anchor="middle">Personalizar</text>
+<rect x="965" y="726" width="104" height="42" rx="8" fill="#f3f6fa" stroke="#d6e1ef"/>
+<g transform="translate(1008 730) scale(0.6666666666666666)" fill="none" stroke="#159657" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M6 10V6a6 6 0 0 1 12 0v4 M4 10h16v12H4z M12 14v4"/></g>
+<text x="1017" y="759" fill="#304966" font-size="10" font-weight="400" text-anchor="middle">Desbloquear conta</text>
+<rect x="1074" y="726" width="104" height="42" rx="8" fill="#f3f6fa" stroke="#d6e1ef"/>
+<g transform="translate(1117 730) scale(0.6666666666666666)" fill="none" stroke="#0878e5" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2a7 7 0 1 1-3 13L4 22H1v-4l9-9 M16 6h.1"/></g>
+<text x="1126" y="759" fill="#304966" font-size="10" font-weight="400" text-anchor="middle">Redefinir senha</text>
+<rect x="1183" y="726" width="104" height="42" rx="8" fill="#f3f6fa" stroke="#d6e1ef"/>
+<g transform="translate(1226 730) scale(0.6666666666666666)" fill="none" stroke="#c9424c" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20 M5 19L19 5"/></g>
+<text x="1235" y="759" fill="#304966" font-size="10" font-weight="400" text-anchor="middle">Desativar conta</text>
+<rect x="1292" y="726" width="104" height="42" rx="8" fill="#f3f6fa" stroke="#d6e1ef"/>
+<g transform="translate(1335 730) scale(0.6666666666666666)" fill="none" stroke="#9054d6" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16L16 3l5 5L8 21H3z M13 6l5 5"/></g>
+<text x="1344" y="759" fill="#304966" font-size="10" font-weight="400" text-anchor="middle">Editar usuário</text>
+<rect x="965" y="773" width="104" height="42" rx="8" fill="#f3f6fa" stroke="#d6e1ef"/>
+<g transform="translate(1008 777) scale(0.6666666666666666)" fill="none" stroke="#159657" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18 M3 12h18"/></g>
+<text x="1017" y="806" fill="#304966" font-size="10" font-weight="400" text-anchor="middle">Criar usuário</text>
+<rect x="1074" y="773" width="104" height="42" rx="8" fill="#f3f6fa" stroke="#d6e1ef"/>
+<g transform="translate(1117 777) scale(0.6666666666666666)" fill="none" stroke="#0878e5" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7 M1 19v-2c0-5 14-5 14 0v2z M16 4a3 3 0 0 1 0 6 M17 13c4 0 6 2 6 4v2h-5"/></g>
+<text x="1126" y="806" fill="#304966" font-size="10" font-weight="400" text-anchor="middle">Gerenciar grupos</text>
+<rect x="1183" y="773" width="104" height="42" rx="8" fill="#f3f6fa" stroke="#d6e1ef"/>
+<g transform="translate(1226 777) scale(0.6666666666666666)" fill="none" stroke="#9054d6" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7h13v15H8z M3 17V2h13"/></g>
+<text x="1235" y="806" fill="#304966" font-size="10" font-weight="400" text-anchor="middle">Copiar grupos</text>
+<rect x="1292" y="773" width="104" height="42" rx="8" fill="#f3f6fa" stroke="#d6e1ef"/>
+<g transform="translate(1335 777) scale(0.6666666666666666)" fill="none" stroke="#9054d6" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2h9l5 5v15H5z M14 2v6h5"/></g>
+<text x="1344" y="806" fill="#304966" font-size="10" font-weight="400" text-anchor="middle">Gerar resposta</text>
+<rect x="17" y="844" width="1406" height="39" rx="8" fill="#fff" stroke="none"/>
+<path d="M17 844L1423 844" stroke="#d9e3ef" stroke-width="1" fill="none"/>
+<circle cx="31" cy="863" r="4.5" fill="#148c56"/>
+<text x="44" y="868" fill="#16834c" font-size="12" font-weight="400" text-anchor="start">demo.example.test · DC=example,DC=test</text>
+<text x="1400" y="868" fill="#526c88" font-size="12" font-weight="400" text-anchor="end">AlgeAD Manager · RC4 · Prévia ilustrativa</text>
+</g></svg>
