@@ -1,10 +1,6 @@
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/brand-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="assets/brand-light.png">
-  <img src="assets/brand-light.png" width="112" alt="Símbolo oficial do AlgeAD Manager">
-</picture>
+<img src="assets/brand.svg" width="112" alt="Símbolo oficial do AlgeAD Manager">
 
 <h1>AlgeAD Manager</h1>
 
@@ -88,7 +84,7 @@ As operações dependem das permissões da conta autenticada, das políticas do 
 | Modo claro, escuro ou automático | Menu lateral recolhível |
 | Temas e cores de destaque | Painéis de informações e ações rápidas |
 | Fontes, densidade e tamanho de ícones ajustáveis | Tabelas com colunas personalizáveis |
-| Identidade visual adaptada a cada tema | Layout adaptável a diferentes larguras de janela |
+| Identidade visual única nos modos claro e escuro | Layout adaptável a diferentes larguras de janela |
 
 ### Experimente sem um domínio real
 
