@@ -1,0 +1,132 @@
+name: Retencao de instaladores e artefatos
+on:
+  push:
+    branches: [main, maintenance/release-retention]
+    paths: ['.github/workflows/release-retention.yml']
+  release:
+    types: [published]
+  schedule:
+    - cron: '17 7 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: release-retention
+  cancel-in-progress: false
+jobs:
+  cleanup:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Preservar historico e limpar pacotes antigos
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import os, json, re, subprocess, pathlib, tempfile, base64, datetime
+          repo=os.environ["GITHUB_REPOSITORY"]
+          name=repo.split("/")[-1].lower()
+          allowed={"algeadmanager","algeadmanager-releases","algedownloadmanager","algedownloadmanager-releases","algecopypro","algecopypro-releases","algewalls"}
+          assert name in allowed
+          def gh(*args):
+              return subprocess.check_output(["gh","api",*args],text=True)
+          def pages(endpoint):
+              return json.loads(gh("--paginate","--slurp",endpoint))
+          def releases():
+              return [r for page in pages(f"repos/{repo}/releases?per_page=100") for r in page]
+          def installer(a):
+              return bool(re.match(r"^alge(?:admanager|downloadmanager|copypro|walls)[-_. ]",a["name"],re.I)) and bool(re.search(r"\.(exe|msi|zip|7z|apk|aab)$",a["name"],re.I)) and not re.search(r"(source.?code|codigo.?fonte)",a["name"],re.I)
+          def experimental(r):
+              return r["prerelease"] or bool(re.search(r"(?:^|[- .])(alpha|beta|rc|preview|ci-test)(?:[. -]|\d|$)",r["tag_name"]+" "+(r.get("name") or ""),re.I))
+          def order(r):
+              return (r.get("published_at") or r.get("created_at") or "",r["id"])
+          rows=releases()
+          active=sorted([r for r in rows if not r["draft"] and any(installer(a) for a in r["assets"])],key=order,reverse=True)
+          stable=[r for r in active if not experimental(r)]
+          pre=[r for r in active if experimental(r)]
+          keep={r["tag_name"] for r in stable[:5]+pre[:3]}
+          if stable:
+              latest=json.loads(gh(f"repos/{repo}/releases/latest"))
+              keep.add(latest["tag_name"])
+          pins={"algedownloadmanager":{"ci-test-24-1"},"algewalls":{"v0.3.1-alpha-build-9"}}
+          keep.update(pins.get(name,set()))
+          if name=="algecopypro-releases":
+              doc=json.loads(gh(f"repos/{repo}/contents/latest.json"))
+              latest=json.loads(base64.b64decode(doc["content"]))
+              for platform in latest["platforms"].values():
+                  match=re.search(r"/releases/download/([^/]+)/",platform["url"])
+                  if not match: raise RuntimeError("Unrecognized updater URL")
+                  keep.add(match.group(1))
+          if name=="algeadmanager-releases":
+              # Keep the newest complete package in each channel and every base used by a retained patch.
+              for group in (stable,pre):
+                  for r in group:
+                      files=[a["name"] for a in r["assets"] if installer(a)]
+                      if any(x.endswith(".msi") and "-UI-from-" not in x for x in files) and any(x.endswith("-Portable-x64.zip") for x in files):
+                          keep.add(r["tag_name"])
+                          break
+              while True:
+                  before=set(keep)
+                  for r in active:
+                      if r["tag_name"] in keep:
+                          for a in r["assets"]:
+                              for base in re.findall(r"-UI-from-(\d{8}\.\d{2,4})",a["name"]):
+                                  keep.add("build-"+base)
+                  if before==keep: break
+          plan=[(r,a) for r in active if r["tag_name"] not in keep for a in r["assets"] if installer(a)]
+          print("Retained tags:",", ".join(sorted(keep)),flush=True)
+          print("Planned:",len(plan),"assets,",sum(a["size"] for _,a in plan),"bytes",flush=True)
+          # Refresh the public AD updater index BEFORE deleting assets, using the same schema
+          # as the official publisher. Abort without deletion if it cannot be updated.
+          if name=="algeadmanager-releases" and plan:
+              removed={a["id"] for _,a in plan}
+              catalog=[]
+              for r in active:
+                  if not re.fullmatch(r"build-\d{8}\.\d{2,4}",r["tag_name"]): continue
+                  assets=[{k:a[k] for k in ("id","name","size","state","digest")} for a in r["assets"] if a["id"] not in removed and re.search(r"\.(msi|zip)$",a["name"],re.I) and a["state"]=="uploaded" and re.fullmatch(r"sha256:[a-fA-F0-9]{64}",a.get("digest") or "")]
+                  if assets: catalog.append({k:r[k] for k in ("draft","tag_name","published_at","body")}|{"assets":assets})
+              if not catalog: raise RuntimeError("Empty AD updater catalog; no deletion")
+              current=json.loads(gh(f"repos/{repo}/contents/update-catalog.json"))
+              payload={"message":"Atualizar catalogo de instaladores retidos","branch":"main","sha":current["sha"],"content":base64.b64encode(json.dumps(catalog,ensure_ascii=False,separators=(",",":")).encode()).decode()}
+              with tempfile.NamedTemporaryFile(mode="w",suffix=".json") as fp:
+                  json.dump(payload,fp);fp.flush()
+                  gh("--method","PUT",f"repos/{repo}/contents/update-catalog.json","--input",fp.name,"--silent")
+          count=size=failures=0
+          for r,a in plan:
+              p=subprocess.run(["gh","api","--method","DELETE",f"repos/{repo}/releases/assets/{a['id']}","--silent"])
+              if p.returncode==0:
+                  count+=1;size+=a["size"]
+              else: failures+=1
+          summary=f"Release assets removed: {count}\nRelease bytes removed: {size}\nRelease deletion failures: {failures}\nRetained tags: {', '.join(sorted(keep))}\nRelease entries preserved: {len(rows)}\n"
+          print(summary,flush=True)
+          # Temporary CI artifacts: preserve active runs and the newest successful run
+          # with artifacts for each workflow, otherwise delete only after 3 days.
+          art_count=art_size=art_fail=0
+          try:
+              artifacts=[a for page in pages(f"repos/{repo}/actions/artifacts?per_page=100") for a in page["artifacts"] if not a["expired"]]
+              if artifacts:
+                  runs={r["id"]:r for page in pages(f"repos/{repo}/actions/runs?per_page=100") for r in page["workflow_runs"]}
+                  newest={}
+                  for a in sorted(artifacts,key=lambda a:a["created_at"],reverse=True):
+                      rid=(a.get("workflow_run") or {}).get("id")
+                      run=runs.get(rid,{})
+                      if run.get("conclusion")=="success": newest.setdefault(run["workflow_id"],rid)
+                  protected=set(newest.values())
+                  cutoff=datetime.datetime.now(datetime.timezone.utc)-datetime.timedelta(days=3)
+                  for a in artifacts:
+                      rid=(a.get("workflow_run") or {}).get("id")
+                      if rid in protected or runs.get(rid,{}).get("status")!="completed": continue
+                      if datetime.datetime.fromisoformat(a["created_at"].replace("Z","+00:00"))>=cutoff: continue
+                      p=subprocess.run(["gh","api","--method","DELETE",f"repos/{repo}/actions/artifacts/{a['id']}","--silent"])
+                      if p.returncode==0: art_count+=1;art_size+=a["size_in_bytes"]
+                      else: art_fail+=1
+          except Exception as exc:
+              print("Artifact scan failed:",str(exc),flush=True);art_fail+=1
+          summary+=f"CI artifacts removed: {art_count}\nCI bytes removed: {art_size}\nCI deletion failures: {art_fail}\n"
+          print(summary,flush=True)
+          with open(os.environ["GITHUB_STEP_SUMMARY"],"a") as out: out.write(summary)
+          if failures or art_fail: raise SystemExit(1)
+          
+          PY
