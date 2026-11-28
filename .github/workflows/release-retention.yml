@@ -75,7 +75,13 @@ jobs:
                               for base in re.findall(r"-UI-from-(\d{8}\.\d{2,4})",a["name"]):
                                   keep.add("build-"+base)
                   if before==keep: break
-          plan=[(r,a) for r in active if r["tag_name"] not in keep for a in r["assets"] if installer(a)]
+          # CI lifecycle fixtures: preserve only the two exact MSI assets, not
+          # every old installer in those releases. These are used by TestMsiLifecycle.ps1.
+          ci_msi_pins={
+              ("build-20261127.44","AlgeADManager-1.0.1-20261127.44-x64.msi"),
+              ("build-20261127.49","AlgeADManager-1.0.1-20261127.49-UI-from-20261127.44-x64.msi"),
+          } if name=="algeadmanager-releases" else set()
+          plan=[(r,a) for r in active if r["tag_name"] not in keep for a in r["assets"] if installer(a) and (r["tag_name"],a["name"]) not in ci_msi_pins]
           print("Retained tags:",", ".join(sorted(keep)),flush=True)
           print("Planned:",len(plan),"assets,",sum(a["size"] for _,a in plan),"bytes",flush=True)
           # Refresh the public AD updater index BEFORE deleting assets, using the same schema
